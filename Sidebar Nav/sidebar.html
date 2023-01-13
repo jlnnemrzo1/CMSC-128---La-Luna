@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sidebar</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="sidebar_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="logo-details">
+  <img src="sidebar_logo_1.png" class="logopic1"></img>
+  <img src="sidebar_logo_2.png" class="logopic2"></img>
+</div>
+<ul class="nav-list">
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-clipboard-check"></i>
+      <span class="links_name">Dashboard</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-sliders"></i>
+      <span class="links_name">Admin Setting</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="links_name">Appointments</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-users"></i>
+      <span class="links_name">Customers</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-building"></i>
+      <span class="links_name">Hotel</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-folder-open"></i>
+      <span class="links_name">History</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-scissors"></i>
+      <span class="links_name">Services</span>
+      <div class="active-bar"></div>
+    </a>
+  </li>  
+  <li>
+    <a href="#">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="links_name">Log Out</span>
+      <div class="active-bar"></div>
+    </a>
+  </li> 
+</ul>
+</div>
+<script>
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
+</body>
+</html>

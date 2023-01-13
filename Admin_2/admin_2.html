@@ -1,0 +1,136 @@
+<?php
+    session_start();
+?>
+<html>
+<head>
+	<meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<title>Registration Form</title>
+	<link rel='stylesheet' href='admin_2.css'>
+</head>
+<body onload ="def();">
+
+<div class='title'>
+    Admin Controls
+</div>
+
+<div class='navi'>
+    <button class = 'navi_btn active'>Service</button>
+    <button class = 'navi_btn'>Groomer</button>
+    <button class = 'navi_btn'>Admin Details</button>
+</div>
+<div class="sidebar">
+    <div class="logo-details">
+    <img src="sidebar_logo_1.png" class="logopic1"></img>
+    <img src="sidebar_logo_2.png" class="logopic2"></img>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <span class="links_name">Dashboard</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-sliders"></i>
+        <span class="links_name">Admin Setting</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span class="links_name">Appointments</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-users"></i>
+        <span class="links_name">Customers</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-building"></i>
+        <span class="links_name">Hotel</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-folder-open"></i>
+        <span class="links_name">History</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-scissors"></i>
+        <span class="links_name">Services</span>
+        <div class="active-bar"></div>
+      </a>
+    </li>  
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="links_name">Log Out</span>
+        <div class="active-bar"></div>
+      </a>
+    </li> 
+  </ul>
+  </div>
+  <script>
+  $(document).ready(function(){
+    $('ul li a').click(function(){
+      $('li a').removeClass("active");
+      $(this).addClass("active");
+  });
+  });
+  </script>
+
+<div class='wrapper'>
+    <div class='form'>
+        <div class='inputfield'>
+            <label>Service Name</label>
+            <input type='text' class='input'>
+        </div>  
+        <div class='inputfield'>
+            <label>Price</label>
+            <input type='text' class='input'>
+        </div>  
+        <div class='inputfield radio'>
+            <label>Commission</label>
+            <label class='check'>
+            <input type='radio' checked='checked' name='commision_bool' value='yes'>
+            <span class='checkmark'></span>
+            </label>
+            <p>Yes</p>
+            <label class='check'>
+            <input type='radio' name='commision_bool' value='no'>
+            <span class='checkmark'></span>
+            </label>
+            <p>No</p>
+        </div> 
+        <div class='inputfield'>
+            <input type='submit' value='Save' class='btn'>
+        </div>
+    </div>
+</div>
+
+<script src = 'admin_2.js'></script>
+	
+</body>
+<?php
+    unset($_SESSION["error"]);
+?>

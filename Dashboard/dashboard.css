@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    background-color: #FAFAFA;
+    position: relative;
+    height: auto;
+    min-height: 100%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+}
+
+.banner {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.box {
+    position: relative;
+    top: 50px;
+    width: 60%;
+    height: 35vh;
+    margin: auto;
+    border-radius: 35px;
+    background-color: #FDDA5E;
+    box-shadow: 0px 0px 6px #CCCCCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image1{
+  padding: 0%;
+  margin: -30%;
+}
+
+#dog-image {
+    position: relative;
+    bottom: 0%;
+    left: 25%;
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.dashboard .banner .box .text {
+    display: block;
+    align-items:center;
+}
+
+.dashboard .banner .box .text .welcome-text {
+    position: relative;
+    right: 20%;
+    font-size: 3.5vw;
+    font-weight: 1000;
+    color: #272626;
+    margin: 5px;
+}
+
+.dashboard .banner .box .text .date-text {
+    position: relative;
+    right: 20%;
+    font-size: 1.5vw;
+    font-weight: 200;
+    color: #272626;
+    margin: 5px;
+}
+
+.table {
+    width: 60%;
+    display: block;
+    overflow: auto;
+    margin: auto;
+    border-radius: 35px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 0px 6px #CCCCCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+
+
+.todaytitle
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 8%;
+    font-size: 2.2vw;
+    font-weight: bold;
+    color: #272626;
+    background-color: #E1D5CA;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.tabletitle {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    padding-bottom: 0.2%;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.appointments{
+    padding: 5px;
+}
+
+.contents {
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.contents .customer {
+    
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.tg  
+{
+    border-collapse:collapse;
+    margin-left: 2%;
+    width: 95%;
+}
+
+.tg td
+{
+    border-color: #FAFAFA;
+    border-style:solid;
+    font-size: 1.1vw;
+    overflow:hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    word-break:normal;
+    text-align: center;
+    vertical-align:middle;
+}
+
+.tg th {
+    padding-top: 2%;
+    padding-bottom: 0.2%;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.tg .tg-text1
+{
+    text-align: center;
+    vertical-align:top;
+    width: 15%;
+}
+
+.tg .tg-text2
+{
+    text-align: center;
+    vertical-align:top;
+    width: 15%;
+}
+
+.tg .tg-text3
+{
+    text-align: center;
+    vertical-align:top;
+    width: 22%;
+}
+
+.tg .tg-text4
+{
+    text-align: center;
+    vertical-align:top;
+    width: 25%;
+}
+
+.tg .tg-text6
+{
+    text-align: center;
+    vertical-align:top;
+    width: 20%;
+  white-space: nowrap;
+}
+
+/* SIDEBAR NAV */
+
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logopic1{
+  max-width: 50px;
+  position: relative;
+  top: 10px;
+}
+
+.logopic2{
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #ffffff;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  border-radius: 0 35px 35px 0;
+  -webkit-box-shadow: 3px 0px 11px -3px rgba(206, 68, 68, 0.22);
+  -moz-box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
+  box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
+}
+
+#cat-image{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar:hover{
+  width: 230px;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover .logopic2{
+  display: inline;
+  position: absolute;
+  max-width: 150px; 
+  top: 10px;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.sidebar i{
+  color: #B0B0B0;
+  height: 60px;
+  min-width: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 30px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.sidebar li a{
+  display: flex;
+  height: 8%;
+  width: 100%;
+  border-radius: none;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+}
+
+.sidebar li a .links_name{
+  color: #B0B0B0;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: none;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.sidebar:hover li a .links_name,
+.sidebar li a:hover i{
+  display: inline;
+  pointer-events: auto;
+}
+
+
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #b0b0b0;
+}
+
+.sidebar li a:hover .links_name{
+  transition: all 0.5s ease;
+  opacity: 1;
+  color: #b0b0b0;
+}
+
+.sidebar li i{
+  height: 45px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 12px;
+  background-color: transparent;
+  position: relative;
+}
+
+.sidebar li a:hover{
+  background-color: #fef9e1;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover a.active-page > .active-bar{
+  height: 30px;
+  width: 6px;
+  z-index: 99;
+  background-color: #FADA5E;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 210px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+a.active-page > .active-bar{
+  height: 30px;
+  width: 6px;
+  z-index: 99;
+  background-color: #FADA5E;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 58px;
+  top: 6px;
+  transition: all 0.5s ease;
+}
+
+.sidebar:hover a.active-page > .links_name{
+  color: #3a3a3a;
+}
+
+a.active-page > i{
+  color: #FADA5E;
+}
+
+.sidebar:hover a.active-page > i{
+  color: #FADA5E;
+}
+
+/* HOTEL */
+
+.banner1 {
+  position: relative;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  margin-top: -20px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.box1 {
+  width: 80%;
+  height:  50%;
+  border-radius: 35px;
+  background-color: white;
+  margin-top: -80px;
+  margin-bottom: 80px;
+  margin-left: 25%;
+  box-shadow: 0px 0px 6px #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pets-num
+{
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.number {
+  font-size: 3.5vw;
+  font-weight: bold;
+  text-align: center;
+  color: #272626;
+}
+
+.box-text {
+  text-align: center;
+  font-size: 1.1vw;
+}

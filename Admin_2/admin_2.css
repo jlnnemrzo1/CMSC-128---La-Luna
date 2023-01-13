@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: #fafafa;
+    padding: 0 10px;
+}
+.wrapper{
+    max-width: 50%;
+    width: 100%;
+    background: #fff;
+    margin: 2% auto;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    padding: 2%;
+    border-radius: 30px;
+}
+
+.title{
+    font-size: 3.5vw;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #3A3A3A;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.navi {
+    text-align: center;
+
+}
+
+.navi .navi_btn{
+    width: 17%;
+    padding: 8px 10px;
+    font-size: 1.2vw; 
+    border: 0px;
+    background:  #fff;
+    color: #3a3a3a;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    text-align: center;
+}
+
+.navi .navi_btn:hover{
+    background: #FDDA5E;
+    color: #3a3a3a;
+}
+
+.navi .navi_btn.active{
+    background: #FDDA5E;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+
+.wrapper .form{
+    width: 100%;
+}
+
+.wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .inputfield label{
+    width: 200px;
+    color: #757575;
+    margin-right: 10px;
+    font-size: 1.2vw;
+}
+
+.wrapper .form .inputfield .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 1.1vw;
+    padding: 8px 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+
+.wrapper .form .inputfield .check{
+    margin: 0 0.2vw 0 5vw;
+    width: 15px;
+    height: 15px;
+    display: block;
+    cursor: pointer;
+}
+.wrapper .form .inputfield p{
+    font-size: 1.1vw;
+    color: #757575;
+}
+
+.wrapper .form .inputfield .check input[type="radio"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #FDDA5E;
+    display: block;
+    position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+.wrapper .form .inputfield .check input[type="radio"]:checked ~ .checkmark{
+    background: #FDDA5E;
+}
+
+.wrapper .form .inputfield .check input[type="radio"]:checked ~ .checkmark:before{
+    display: block;
+}
+
+.wrapper .form .inputfield .btn{
+    width: 30%;
+    margin:  auto;
+    padding: 8px 10px;
+    font-size: 1vw; 
+    border: 0px;
+    font-weight: bold;
+    background:  #FDDA5E;
+    color: #3a3a3a;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+}
+
+.wrapper .form .inputfield .btn:hover{
+    background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child{
+    margin-bottom: 0;
+}
+
+
+.tg th {
+  padding-top: 2%;
+  padding-bottom: 0.2%;
+  font-size: 1.3vw;
+  font-weight: 500;
+  text-align: center;
+}
+
+.tg  
+{
+    border-collapse:collapse;
+    border-color: #FADA5E;
+    width: 100%;
+    padding-left: 5%;
+}
+
+.tg td
+{
+    border-color: #FAFAFA;
+    font-size: 1.1vw;
+    overflow:hidden;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    word-break:normal;
+    text-align: center;
+    vertical-align:middle;
+}
+
+#icon
+{
+  border: none;
+}
+
+@media (max-width:420px) {
+    .navi .button{
+        flex-direction: row;
+    }
+    .wrapper .form .inputfield{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .inputfield label{
+        margin-bottom: 5px;
+    }
+    .wrapper .form .inputfield.radio{
+        flex-direction: row;
+    }
+}
+
+/* SIDEBAR NAV */
+
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logopic1{
+  max-width: 50px;
+  position: relative;
+  top: 10px;
+}
+
+.logopic2{
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #ffffff;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  border-radius: 0 35px 35px 0;
+  -webkit-box-shadow: 3px 0px 11px -3px rgba(206, 68, 68, 0.22);
+  -moz-box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
+  box-shadow: 3px 0px 11px -3px rgba(3,3,3,0.22);
+}
+
+.sidebar:hover{
+  width: 230px;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover .logopic2{
+  display: inline;
+  position: absolute;
+  max-width: 150px; 
+  top: 10px;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.sidebar i{
+  color: #B0B0B0;
+  height: 60px;
+  min-width: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 30px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.sidebar li a{
+  display: flex;
+  height: 8%;
+  width: 100%;
+  border-radius: none;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+}
+
+.sidebar li a .links_name{
+  color: #B0B0B0;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: none;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.sidebar:hover li a .links_name,
+.sidebar li a:hover i{
+  display: inline;
+  pointer-events: auto;
+}
+
+
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #b0b0b0;
+}
+
+.sidebar li a:hover .links_name{
+  transition: all 0.5s ease;
+  opacity: 1;
+  color: #b0b0b0;
+}
+
+.sidebar li i{
+  height: 45px;
+  line-height: 40px;
+  font-size: 18px;
+  border-radius: 12px;
+  background-color: transparent;
+  position: relative;
+}
+
+.sidebar li a:hover{
+  background-color: #fef9e1;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover a.active-page > .active-bar{
+  height: 30px;
+  width: 6px;
+  z-index: 99;
+  background-color: #FADA5E;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 210px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+a.active-page > .active-bar{
+  height: 30px;
+  width: 6px;
+  z-index: 99;
+  background-color: #FADA5E;
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  left: 58px;
+  top: 6px;
+  transition: all 0.5s ease;
+}
+
+.sidebar:hover a.active-page > .links_name{
+  color: #3a3a3a;
+}
+
+a.active-page > i{
+  color: #FADA5E;
+}
+
+.sidebar:hover a.active-page > i{
+  color: #FADA5E;
+}
