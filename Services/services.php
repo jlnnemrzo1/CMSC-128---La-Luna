@@ -153,7 +153,7 @@
                         <input type = "radio" id = "ten" name = "disc" value = "10"> 10% &emsp; &emsp;
                         <input type = "radio" id = "fifty" name = "disc" value = "50"> 50% &emsp; &emsp;
                         <input type = "radio" id = "manual" name = "disc" onclick = "selectmanual()"> Manual &emsp;
-                        <input type = "number" class = "select1" min="1" id = "manualinput" name = "disc" style = "opacity: 0.5;" disabled>
+                        <input type = "number" class = "select1" min="1" id = "manualinput" name = "disc" style = "opacity: 0.5;" disabled oninput = "setAttr('manual','manualinput')">
                     </td>
                 </tr>
             </table> <br>
@@ -211,7 +211,7 @@
               <td>
                 <td><input type = "checkbox" id = "ag1" min = "1" name = "ag1" onclick = "extraguests('ag1','nightsnum1');setdaycarestyle()" details = "s-m"> &ensp;Extra Guests (S-M)<br>
                   &ensp; &emsp;<input type = "number"  min = "1" class = "select2" name = "ag1" id = "nightsnum1" disabled style = "opacity: 0.5;" oninput = "setAttr('ag1','nightsnum1')"> <br>
-                    <input type = "checkbox" id = "ag2" min = "1"  name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2');setdaycarestyle()" details = "l-xxl"x> &ensp;Extra Guests (L-XXL) <br>
+                    <input type = "checkbox" id = "ag2" min = "1"  name = "ag2" style = "margin-top: 10px;" onclick="extraguests('ag2','nightsnum2');setdaycarestyle()" details = "l-xxl"> &ensp;Extra Guests (L-XXL) <br>
                   &ensp; &emsp;<input type = "number" min = "1" class = "select2" name = "ag2" id = "nightsnum2" disabled style = "opacity: 0.5;" oninput = "setAttr('ag2','nightsnum2')">
               </td></td>
               </tr>
