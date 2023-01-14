@@ -11,8 +11,9 @@ if ($connect->connect_error) {
     die("Connection failed: " . $connect->connect_error);
 }
 
-$colres = $connect->query("SELECT sum(Extra_Guests1 + Extra_Guests2) as total FROM hotel_services;") or die($connect->error);
-$rowres1 =  $connect->query("SELECT COUNT(*) as total1 FROM hotel_services; ") or die($connect->error);
+$todaydate = date("Y-m-d");
+$colres = $connect->query("SELECT sum(Extra_Guests1 + Extra_Guests2) as total FROM hotel_services WHERE (Date(Check_Out_Date) > '$todaydate' AND `Done?` != 'Yes') OR (Date(Check_Out_Date) < '$todaydate' AND `Done?` != 'Yes')") or die($connect->error);
+$rowres1 =  $connect->query("SELECT COUNT(*) as total1 FROM hotel_services WHERE Date(Check_Out_Date) > '$todaydate' AND `Done?` != 'Yes' OR (Date(Check_Out_Date) < '$todaydate' AND `Done?` != 'Yes')")  or die($connect->error);
 
 if( $rowres1 == NULL){
     $rowres = 0;
@@ -29,7 +30,7 @@ if( $dycr2 == NULL){
 }
 
 
-$result = $connect->query("SELECT * FROM `hotel_services`,`customer_details` WHERE `hotel_services`.`Owners_ID`= `customer_details`.`Owners_ID` AND cast(App_Date AS date) = CURDATE();") or die($connect->error);
-$result1 = $connect->query("SELECT * FROM `hotel_services_daycare`,`customer_details` WHERE `hotel_services_daycare`.`Owners_ID`= `customer_details`.`Owners_ID` AND cast(App_Date AS date) = CURDATE();") or die($connect->error);
+$result = $connect->query("SELECT * FROM `hotel_services`,`customer_details` WHERE `hotel_services`.`Owners_ID`= `customer_details`.`Owners_ID` AND cast(App_Date AS date) = CURDATE() AND `hotel_services`.`Done?` != 'Yes'") or die($connect->error);
+$result1 = $connect->query("SELECT * FROM `hotel_services_daycare`,`customer_details` WHERE `hotel_services_daycare`.`Owners_ID`= `customer_details`.`Owners_ID`AND cast(App_Date AS date) = CURDATE() AND `hotel_services_daycare`.`Done?` != 'Yes'") or die($connect->error);
 $connect->close();
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2023 at 10:23 PM
+-- Generation Time: Jan 14, 2023 at 07:12 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -39,17 +39,6 @@ CREATE TABLE `customer_details` (
   `Done?` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `customer_details`
---
-
-INSERT INTO `customer_details` (`Owners_ID`, `Owners_Name`, `Pets_Name`, `Contact_Number`, `Date_Booked`, `App_Date`, `Total`, `Paid`, `Done?`) VALUES
-('1ce8b390bae86ce779cd07e32464d7c9', 'Elyze', 'Irene', 12345678912, '2023-01-10 03:40:20', '2023-01-10 07:40:00', '792', 'No', 'Yes'),
-('2f5331e5778ebdeba25f5576072ea6e2', 'Thea', 'Celly', 9123456789, '2023-01-10 01:10:51', '2023-01-12 01:10:00', '1500', 'No', ''),
-('3216b1fee4335c7d6441bffdae121e78', 'Elyze', 'Juna', 9123456789, '2023-01-10 03:27:07', '2023-01-10 03:26:00', '450', 'Yes', 'Yes'),
-('669d334778e91c6b1771a7b84f57ab81', 'Yanna', 'Irene', 12345678912, '2023-01-10 02:07:24', '2023-01-10 02:07:00', '2097', 'Yes', ''),
-('eb80b9ec7491eb69082625b80efc848c', 'Juna', 'Irene', 9123456789, '2023-01-10 01:44:00', '2023-01-10 01:43:00', '500', 'Yes', '');
-
 -- --------------------------------------------------------
 
 --
@@ -84,16 +73,9 @@ CREATE TABLE `hotel_services` (
   `Extra_Guests2` int(11) NOT NULL,
   `Check_In_Date` date NOT NULL,
   `Check_Out_Date` date NOT NULL,
-  `Hotel_Total` float NOT NULL
+  `Hotel_Total` float NOT NULL,
+  `Done?` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `hotel_services`
---
-
-INSERT INTO `hotel_services` (`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_Guests1`, `Extra_Guests2`, `Check_In_Date`, `Check_Out_Date`, `Hotel_Total`) VALUES
-('2f5331e5778ebdeba25f5576072ea6e2', 'Suite', 2, 0, 0, '2023-01-12', '2023-01-14', 1500),
-('eb80b9ec7491eb69082625b80efc848c', 'Cat Room', 1, 0, 0, '2023-01-10', '2023-01-11', 500);
 
 -- --------------------------------------------------------
 
@@ -104,7 +86,8 @@ INSERT INTO `hotel_services` (`Owners_ID`, `Room_Type`, `No_of_Nights`, `Extra_G
 CREATE TABLE `hotel_services_daycare` (
   `Owners_ID` varchar(32) NOT NULL,
   `Pet_Size` varchar(20) NOT NULL,
-  `Daycare_Total` float NOT NULL
+  `Daycare_Total` float NOT NULL,
+  `Done?` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -123,7 +106,7 @@ CREATE TABLE `login_details` (
 --
 
 INSERT INTO `login_details` (`username`, `password`) VALUES
-('abcd@gmail.com', '87654321');
+('abcd@gmail.com', 'happy');
 
 -- --------------------------------------------------------
 
@@ -140,15 +123,6 @@ CREATE TABLE `spa_services` (
   `Add-on_Services` text DEFAULT NULL,
   `Spa_Total` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `spa_services`
---
-
-INSERT INTO `spa_services` (`Owners_ID`, `Groomer`, `Bath_Type`, `Pet_Size`, `Discount`, `Add-on_Services`, `Spa_Total`) VALUES
-('1ce8b390bae86ce779cd07e32464d7c9', 'Irene', 'Basic Bath', 'S', 10, '[Professional Styling] [Teeth Cleaning] [Anal Sac Expression] [Tick & Flea Meditation] ', 792),
-('3216b1fee4335c7d6441bffdae121e78', 'Name2', 'Basic Bath', 'S', 10, '[Professional Styling] ', 450),
-('669d334778e91c6b1771a7b84f57ab81', 'Name1', 'Basic Bath', 'S', 10, '[Professional Styling] [Teeth Cleaning] [Anal Sac Expression] [Tick & Flea Meditation] [Detangling (Regular)] [Detangling (Severe)] [Deshedding] [Lux Whitening Shampoo] ', 2097);
 
 --
 -- Indexes for dumped tables
